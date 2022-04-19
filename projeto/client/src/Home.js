@@ -21,6 +21,10 @@ const Home = () => {
                 </div>
 
                 <div className="navigation">
+                    <Add
+                        open={open}
+                        setOpen={setOpen}
+                    />
                     <Button variant="contained" onClick={() => {navigate("/");}}>Home</Button>
                     <Button variant="contained" onClick={() => setOpen(true)}>Add</Button>
                 </div>
