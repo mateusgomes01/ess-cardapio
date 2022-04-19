@@ -1,5 +1,6 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import Axios from "axios";
 
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -19,7 +20,14 @@ const Add = (props) => {
     };
 
     const onSubmit = (values) => {
-        console.log(values);
+        Axios.post(variables.URL + "add", {
+            name: values.name,
+            price: values.price,
+            description: values.description, 
+        }).then((response) => {
+                console.log(response);
+                handleClose();
+            });
     }
 
     return (
