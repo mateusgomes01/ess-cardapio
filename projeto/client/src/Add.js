@@ -8,6 +8,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
+import variables from './variables.json';
 
 const Add = (props) => {
 
