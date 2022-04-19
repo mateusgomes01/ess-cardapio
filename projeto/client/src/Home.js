@@ -36,6 +36,8 @@ const Home = () => {
                     <Add
                         open={open}
                         setOpen={setOpen}
+                        showItems={showItems} 
+                        setShowItems={setShowItems}
                     />
                     <Button variant="contained" onClick={() => {navigate("/");}}>Home</Button>
                     <Button variant="contained" onClick={() => setOpen(true)}>Add</Button>
