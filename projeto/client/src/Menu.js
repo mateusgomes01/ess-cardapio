@@ -3,7 +3,6 @@ import Axios from "axios";
 
 import Add from "./Add";
 import Item from './Item';
-import Share from './Share';
 
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
@@ -17,7 +16,7 @@ const Menu = ({isMenu, showItems, setShowItems}) => {
 
     const handleDeleteAll = () => {
         toDelete.map((item) => {
-            Axios.delete(variables.URL + "delete/" + item).then(() => {
+            return Axios.delete(variables.URL + "delete/" + item).then(() => {
                 setShowItems([]);
             });
         });

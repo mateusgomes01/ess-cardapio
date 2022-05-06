@@ -17,14 +17,14 @@ const Home = () => {
     useEffect(() => {
         Axios.get(variables.URL + "all").then((response) => {
           setShowItems(response.data);
-        }, [showItems]);
-    });
+        });
+    }, [showItems]);
 
     return (
         <div className="container">
             <div className="section"> 
                 <div className="title">
-                    <img src={logo} className="logo" />
+                    <img src={logo} alt="" className="logo" />
                     <h2> TortiLet Patisserie </h2>
                     <div className="underline"></div>
                 </div>
